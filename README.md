@@ -159,7 +159,6 @@ Plugin runs automatically when android plugin executes ProGuard or R8 task:
 
 You don't have to specify anything special to get it work.
 
-
 ### Dictionary alphabet
 
 Whitespaces, punctuation characters, duplicate words, and comments after a `#` sign are ignored 
@@ -169,14 +168,10 @@ in dictionaries by ProGuard. So generated file could contains any symbols except
 
 ### Contribution
 
-You need to test plugin locally, right?
-To build plugin locally `uploadArchives` gradle task is used that puts plugin into 
-`PROJECT_DIR/plugin/pluginRepo` folder.
-Plugin should be added to project's buildscript.
-First time after cloning the project there's no locally built plugin so plugin should be downloaded from Gradle Plugin portal thus artifactId is 
-`gradle.plugin.de.maxr1998.proguard-dictionaries-generator:plugin`
-After project sync upload plugin locally and set artifactId to `de.maxr1998.proguard-dictionaries-generator:plugin`.
-You can find artifactId [here](https://github.com/CleverPumpkin/Proguard-Dictionaries-Generator/blob/master/buildSrc/src/main/kotlin/Dependencies.kt#L45)
+If you have any suggestions or found a bug, you're welcome to contribute to this project.
+Before submitting a pull request, open an issue discussing your planned changes first, please.
+
+You can test the plugin locally through the provided sample [app](app).
 
 ## Maintainers
 Updated to support Gradle configuration cache and maintained by Max Rumpf (@Maxr1998)
