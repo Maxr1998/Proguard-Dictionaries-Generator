@@ -45,11 +45,12 @@ abstract class ProguardR8DictionaryGeneratorPlugin : Plugin<Project> {
         val taskProvider = tasks.register(
             ProguardR8DictionaryGeneratorTask.NAME,
             ProguardR8DictionaryGeneratorTask::class.java,
-            pluginExtension.dictionaryNames,
-            pluginExtension.linesCountInDictionary,
-            pluginExtension.minLineLength.coerceAtLeast(1),
-            pluginExtension.maxLineLength.coerceAtLeast(1)
-        )
+        ) { task ->
+            task.linesCountInDictionary.set(pluginExtension.linesCountInDictionary)
+            task.minLineLength.set(pluginExtension.minLineLength.coerceAtLeast(1))
+            task.maxLineLength.set(pluginExtension.maxLineLength.coerceAtLeast(1))
+            task.dictionaryFiles.setFrom(pluginExtension.dictionaryNames.map { name -> "$name.txt" })
+        }
 
         obfuscationTasks.forEach { task ->
             logger.lifecycle("$LOG_TAG: applying dictionaries dependency to task ${task.name}")
