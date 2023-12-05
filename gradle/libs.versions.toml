@@ -1,0 +1,21 @@
+# Contains all the dependecy names and versions used in the project.
+# New dependencies should also be added to the license screen in settings.
+# Some libraries like AndroidX are in a single group and don't have to be listed separately.
+
+[versions]
+proguarddictionariesgenerator = "1.1.0"
+
+kotlin = "1.9.21"
+android-plugin = "8.2.0"
+androidx-appcompat = "1.6.1"
+
+[plugins]
+proguarddictionariesgenerator = { id = "ru.cleverpumpkin.proguard-dictionaries-generator", version.ref = "proguarddictionariesgenerator" }
+
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" } # Plugin
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" } # App
+android-app = { id = "com.android.application", version.ref = "android-plugin" }
+
+[libraries]
+android-tools = { group = "com.android.tools.build", name = "gradle", version.ref = "android-plugin" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx-appcompat" }
