@@ -7,6 +7,8 @@ proguarddictionariesgenerator = "1.1.0"
 
 kotlin = "1.9.21"
 android-plugin = "8.2.0"
+gradle-publish = "1.2.1"
+
 androidx-appcompat = "1.6.1"
 
 [plugins]
@@ -15,6 +17,7 @@ proguarddictionariesgenerator = { id = "de.maxr1998.proguard-dictionaries-genera
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" } # Plugin
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" } # App
 android-app = { id = "com.android.application", version.ref = "android-plugin" }
+gradle-publish = { id = "com.gradle.plugin-publish", version.ref = "gradle-publish" }
 
 [libraries]
 android-tools = { group = "com.android.tools.build", name = "gradle", version.ref = "android-plugin" }
