@@ -93,7 +93,7 @@ for each build.
 For **Kotlin DSL**
 ```kotlin
 proguardDictionaries {
-    dictionaryNames = listOf("any", "files, "you", "want") // resolved relatively to project dir
+    dictionaryNames = listOf("any", "files, "you", "want") // Resolved relative to project directory
     minLineLength = 20  // Default value: 10
     maxLineLength = 50  // Default value: 30
     linesCountInDictionary = 50000  // Default value: 30000
@@ -103,7 +103,7 @@ proguardDictionaries {
 For **Groovy**
 ```groovy
 proguardDictionaries {
-    dictionaryNames = [ "any", "files, "you", "want" ] // resolved relatively to project dir
+    dictionaryNames = [ "any", "files, "you", "want" ] // Resolved relative to project directory
     minLineLength 20  // Default value: 10
     maxLineLength 50  // Default value: 30
     linesCountInDictionary 50000  // Default value: 30000
