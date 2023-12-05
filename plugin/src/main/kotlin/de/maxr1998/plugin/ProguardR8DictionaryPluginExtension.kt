@@ -1,4 +1,4 @@
-package ru.cleverpumpkin.plugin
+package de.maxr1998.plugin
 
 /**
  * Created by Sergey Chuprin on 16/01/2019.

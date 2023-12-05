@@ -4,11 +4,12 @@ plugins {
 }
 
 object PluginInfo {
-    const val ID = "ru.cleverpumpkin.proguard-dictionaries-generator"
-    const val IMPLEMENTATION_CLASS = "ru.cleverpumpkin.plugin.ProguardR8DictionaryGeneratorPlugin"
+    const val GROUP = "de.maxr1998"
+    const val ID = "$GROUP.proguard-dictionaries-generator"
+    const val IMPLEMENTATION_CLASS = "$GROUP.plugin.ProguardR8DictionaryGeneratorPlugin"
 }
 
-group = PluginInfo.ID
+group = PluginInfo.GROUP
 version = libs.versions.proguarddictionariesgenerator.get()
 
 gradlePlugin {

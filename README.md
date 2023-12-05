@@ -11,7 +11,7 @@ For **Kotlin DSL**
 ```kotlin
 // Using the plugins DSL (in the app module's build.gradle.kts):
 plugins {
-    id("ru.cleverpumpkin.proguard-dictionaries-generator") version "1.0.8"
+    id("de.maxr1998.proguard-dictionaries-generator") version "1.0.8"
 }
 
 // Using legacy plugin application (in the root project buildscript):
@@ -22,7 +22,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath("gradle.plugin.ru.cleverpumpkin.proguard-dictionaries-generator:plugin:1.0.8")
+        classpath("gradle.plugin.de.maxr1998.proguard-dictionaries-generator:plugin:1.0.8")
     }
 }
 ```
@@ -31,7 +31,7 @@ For **Groovy**
 ```groovy
 // Using the plugins DSL (in the app module's build.gradle):
 plugins {
-    id "ru.cleverpumpkin.proguard-dictionaries-generator" version "1.0.8"
+    id "de.maxr1998.proguard-dictionaries-generator" version "1.0.8"
 }
 
 // Using legacy plugin application (in the root project buildscript):
@@ -43,7 +43,7 @@ buildscript {
     }
 
     dependencies {
-        classpath "gradle.plugin.ru.cleverpumpkin.proguard-dictionaries-generator:plugin:1.0.8"
+        classpath "gradle.plugin.de.maxr1998.proguard-dictionaries-generator:plugin:1.0.8"
     }
 }
 ```
@@ -55,7 +55,7 @@ For **Kotlin DSL**
 ```kotlin
 plugins {
     // Only required with legacy plugin application
-    id("ru.cleverpumpkin.proguard-dictionaries-generator")
+    id("de.maxr1998.proguard-dictionaries-generator")
 }
 
 proguardDictionaries {
@@ -70,7 +70,7 @@ proguardDictionaries {
 For **Groovy**
 ```groovy
 // Only required with legacy plugin application
-apply plugin: "ru.cleverpumpkin.proguard-dictionaries-generator"
+apply plugin: "de.maxr1998.proguard-dictionaries-generator"
 
 proguardDictionaries {
     dictionaryNames = [
@@ -174,8 +174,8 @@ To build plugin locally `uploadArchives` gradle task is used that puts plugin in
 `PROJECT_DIR/plugin/pluginRepo` folder.
 Plugin should be added to project's buildscript.
 First time after cloning the project there's no locally built plugin so plugin should be downloaded from Gradle Plugin portal thus artifactId is 
-`gradle.plugin.ru.cleverpumpkin.proguard-dictionaries-generator:plugin`
-After project sync upload plugin locally and set artifactId to `ru.cleverpumpkin.proguard-dictionaries-generator:plugin`.
+`gradle.plugin.de.maxr1998.proguard-dictionaries-generator:plugin`
+After project sync upload plugin locally and set artifactId to `de.maxr1998.proguard-dictionaries-generator:plugin`.
 You can find artifactId [here](https://github.com/CleverPumpkin/Proguard-Dictionaries-Generator/blob/master/buildSrc/src/main/kotlin/Dependencies.kt#L45)
 
 ## Maintainers

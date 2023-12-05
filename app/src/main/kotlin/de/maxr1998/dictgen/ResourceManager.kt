@@ -1,4 +1,4 @@
-package ru.cleverpumpkin.dictgen
+package de.maxr1998.dictgen
 
 import android.content.Context
 import androidx.core.content.ContextCompat

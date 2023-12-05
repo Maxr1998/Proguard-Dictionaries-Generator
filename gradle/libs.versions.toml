@@ -10,7 +10,7 @@ android-plugin = "8.2.0"
 androidx-appcompat = "1.6.1"
 
 [plugins]
-proguarddictionariesgenerator = { id = "ru.cleverpumpkin.proguard-dictionaries-generator", version.ref = "proguarddictionariesgenerator" }
+proguarddictionariesgenerator = { id = "de.maxr1998.proguard-dictionaries-generator", version.ref = "proguarddictionariesgenerator" }
 
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" } # Plugin
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" } # App

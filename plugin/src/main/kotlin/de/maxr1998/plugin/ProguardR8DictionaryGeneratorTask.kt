@@ -1,4 +1,4 @@
-package ru.cleverpumpkin.plugin
+package de.maxr1998.plugin
 
 import org.gradle.api.DefaultTask
 import org.gradle.api.file.ConfigurableFileCollection

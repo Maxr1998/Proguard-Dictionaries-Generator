@@ -13,7 +13,7 @@ proguardDictionaries {
 }
 
 android {
-    namespace = "ru.cleverpumpkin.dictgen"
+    namespace = "de.maxr1998.dictgen"
 
     compileSdk = 34
 

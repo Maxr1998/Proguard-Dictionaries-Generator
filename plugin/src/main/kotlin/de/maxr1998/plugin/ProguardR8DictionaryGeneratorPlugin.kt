@@ -1,4 +1,4 @@
-package ru.cleverpumpkin.plugin
+package de.maxr1998.plugin
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project
