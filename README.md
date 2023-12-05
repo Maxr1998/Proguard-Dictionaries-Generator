@@ -11,7 +11,7 @@ For **Kotlin DSL**
 ```kotlin
 // Using the plugins DSL (in the app module's build.gradle.kts):
 plugins {
-    id("de.maxr1998.proguard-dictionaries-generator") version "1.0.8"
+    id("de.maxr1998.proguard-dictionaries-generator") version "1.1.0"
 }
 
 // Using legacy plugin application (in the root project buildscript):
@@ -22,7 +22,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath("gradle.plugin.de.maxr1998.proguard-dictionaries-generator:plugin:1.0.8")
+        classpath("gradle.plugin.de.maxr1998.proguard-dictionaries-generator:plugin:1.1.0")
     }
 }
 ```
@@ -31,7 +31,7 @@ For **Groovy**
 ```groovy
 // Using the plugins DSL (in the app module's build.gradle):
 plugins {
-    id "de.maxr1998.proguard-dictionaries-generator" version "1.0.8"
+    id "de.maxr1998.proguard-dictionaries-generator" version "1.1.0"
 }
 
 // Using legacy plugin application (in the root project buildscript):
@@ -43,7 +43,7 @@ buildscript {
     }
 
     dependencies {
-        classpath "gradle.plugin.de.maxr1998.proguard-dictionaries-generator:plugin:1.0.8"
+        classpath "gradle.plugin.de.maxr1998.proguard-dictionaries-generator:plugin:1.1.0"
     }
 }
 ```
