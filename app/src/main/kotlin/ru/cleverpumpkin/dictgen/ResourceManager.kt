@@ -6,9 +6,8 @@ import androidx.core.content.ContextCompat
 /**
  * Created by Sergey Chuprin on 16/01/2019.
  */
-class ResourceManager(
-    private val context: Context
-) {
+@Suppress("unused")
+class ResourceManager(private val context: Context) {
 
     fun getAccentColor(): Int = ContextCompat.getColor(context, R.color.colorAccent)
 
@@ -19,5 +18,4 @@ class ResourceManager(
     fun getString(stringResId: Int, vararg args: Any): String {
         return context.getString(stringResId, *args)
     }
-
 }

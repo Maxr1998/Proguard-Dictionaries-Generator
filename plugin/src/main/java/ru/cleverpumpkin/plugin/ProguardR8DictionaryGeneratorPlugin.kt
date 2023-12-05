@@ -7,8 +7,7 @@ import org.gradle.api.Task
 /**
  * Created by Sergey Chuprin on 16/01/2019.
  */
-@Suppress("unused")
-class ProguardR8DictionaryGeneratorPlugin : Plugin<Project> {
+abstract class ProguardR8DictionaryGeneratorPlugin : Plugin<Project> {
 
     private companion object {
         const val LOG_TAG = "ProguardR8DictionaryGenerator"
@@ -35,15 +34,11 @@ class ProguardR8DictionaryGeneratorPlugin : Plugin<Project> {
         val obfuscationTasks = findObfuscationTasks()
 
         if (obfuscationTasks.isEmpty()) {
-            logger.lifecycle(
-                "$LOG_TAG: neither proguard tasks, nor R8 tasks were not found"
-            )
+            logger.lifecycle("$LOG_TAG: neither proguard tasks, nor R8 tasks were not found")
             return
         }
         if (pluginExtension.dictionaryNames.isEmpty()) {
-            logger.lifecycle(
-                "$LOG_TAG: you've applied plugin, but didn't specified dictionary names"
-            )
+            logger.lifecycle("$LOG_TAG: you've applied plugin, but didn't specified dictionary names")
             return
         }
 
@@ -57,9 +52,7 @@ class ProguardR8DictionaryGeneratorPlugin : Plugin<Project> {
         )
 
         obfuscationTasks.forEach { task ->
-            logger.lifecycle(
-                "$LOG_TAG: applying dictionaries dependency to task ${task.name}"
-            )
+            logger.lifecycle("$LOG_TAG: applying dictionaries dependency to task ${task.name}")
             task.dependsOn(taskProvider.get())
         }
     }
@@ -75,5 +68,4 @@ class ProguardR8DictionaryGeneratorPlugin : Plugin<Project> {
     private fun Project.findPluginExtension(): ProguardR8DictionaryPluginExtension {
         return extensions.getByType(ProguardR8DictionaryPluginExtension::class.java)
     }
-
 }

@@ -3,18 +3,18 @@ package ru.cleverpumpkin.plugin
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.TaskAction
 import java.io.File
-import java.util.*
+import java.util.Random
 import java.util.concurrent.ThreadLocalRandom
 import javax.inject.Inject
 
 /**
  * Created by Sergey Chuprin on 16/01/2019.
  */
-open class ProguardR8DictionaryGeneratorTask @Inject constructor(
+abstract class ProguardR8DictionaryGeneratorTask @Inject constructor(
     private val dictionaryNames: List<String>,
     private val linesCountInDictionary: Int,
     private val minLineLength: Int,
-    private val maxLineLength: Int
+    private val maxLineLength: Int,
 ) : DefaultTask() {
 
     companion object {
@@ -51,5 +51,4 @@ open class ProguardR8DictionaryGeneratorTask @Inject constructor(
             .map { alphabet[random.nextInt(alphabet.length)] }
             .joinToString("")
     }
-
 }

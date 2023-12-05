@@ -20,5 +20,4 @@ class MainActivity : Activity() {
             Thread.sleep(10)
         }
     }
-
 }
