@@ -174,7 +174,8 @@ Before submitting a pull request, open an issue discussing your planned changes 
 You can test the plugin locally through the provided sample [app](app).
 
 ## Maintainers
-Updated to support Gradle configuration cache and maintained by Max Rumpf (@Maxr1998)
+Updated to support Gradle configuration cache and maintained
+by Max Rumpf ([@Maxr1998](https://githbub.com/Maxr1998))
 
 ## Original Authors
 Developed by Sergey Chuprin (<gregamer@gmail.com>)<br/>
